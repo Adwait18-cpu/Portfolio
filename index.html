@@ -1,391 +1,391 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--=============== FAVICON ===============-->
-    <link rel="shortcut icon" href="Assets/image/man.png" type="image/x-icon" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="description" content="Adwait Tikekar — Software Engineer. Portfolio, projects, and skills." />
 
-    <!--=============== REMIX ICONS ===============-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
+  <!--=============== FAVICON ===============-->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f172a'/%3E%3Ctext x='50%25' y='68%25' font-family='system-ui, sans-serif' font-weight='800' font-size='60' fill='%23a1a1aa' stroke='%236366f1' stroke-width='3' stroke-linejoin='round' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E" />
 
-    <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="Assets/style.css" />
+  <!--=============== REMIX ICONS ===============-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
 
-    <title>Adwait Tikekar</title>
-  </head>
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="Assets/style.css" />
 
-  <body>
-    <!--=============== HEADER ===============-->
-    <header class="profile container">
-      <!-- Theme button -->
-      <i class="ri-moon-line change-theme" id="theme-button"></i>
+  <title>Adwait Tikekar</title>
+</head>
 
-      <div class="profile__container grid">
-        <div class="profile__data">
-          <div class="profile__border">
-            <div class="profile__perfil">
-              <!-- Insert your image, according to the example size of the portfolio -->
-              <img src="Assets/image/avatar1.jpg" alt="" />
+<body class="dark-theme">
+  <div class="bg-animation" aria-hidden="true">
+    <canvas id="bgCanvas"></canvas>
+  </div>
+
+  <!--=============== HEADER ===============-->
+  <header class="profile container">
+    <!-- Theme button -->
+    <i class="ri-moon-line ri-sun-line change-theme" id="theme-button"></i>
+
+    <div class="profile__container grid">
+      <div class="profile__data">
+        <div class="profile__border">
+          <div class="profile__perfil">
+            <!-- Insert your image, according to the example size of the portfolio -->
+            <img src="Assets/image/profile_photo.jpg" alt="" />
+          </div>
+        </div>
+
+        <h2 class="profile__name">Adwait Tikekar</h2>
+        <p class="profile__profession">Software Engineer</p>
+
+        <p class="profile__summary" id="about">
+          Building scalable healthcare solutions with 2 years of experience in full-stack development.
+          Specialized in .NET Core, Angular, AWS, and FastAPI. Passionate about creating high-performance
+          applications that make a difference.
+        </p>
+
+        <ul class="profile__social">
+          <a href="https://www.instagram.com/adwait1605p" target="_blank" rel="noopener noreferrer"
+            class="profile__social-link">
+            <i class="ri-instagram-line"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/adwait-tikekar-07673a238" target="_blank" rel="noopener noreferrer"
+            class="profile__social-link">
+            <i class="ri-linkedin-box-line"></i>
+          </a>
+          <a href="https://github.com/Adwait18-cpu" target="_blank" rel="noopener noreferrer"
+            class="profile__social-link">
+            <i class="ri-github-line"></i>
+          </a>
+          <a href="https://twitter.com/AdwaitTikekar?t=SLAcP1YQ4mT4ivGIO1FgFQ&s=09" target="_blank"
+            rel="noopener noreferrer" class="profile__social-link">
+            <i class="ri-twitter-line"></i>
+          </a>
+          <a href="mailto:tikekaradwait6@gmail.com" target="_blank" rel="noopener noreferrer"
+            class="profile__social-link">
+            <i class="ri-mail-line"></i>
+          </a>
+          <a href="tel:+919822864078" target="_blank" rel="noopener noreferrer" class="profile__social-link">
+            <i class="ri-phone-line"></i>
+          </a>
+        </ul>
+      </div>
+
+      <div class="profile__buttons">
+        <!-- Insert your CV -->
+        <a download="" href="Assets/Resume/Adwait_Resume_26_03_2026.pdf" class="button">
+          Download Resume <i class="ri-download-line"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!--=============== MAIN ===============-->
+  <main class="main">
+    <section class="filters container">
+      <!--=============== FILTERS TABS ===============-->
+      <ul class="filters__content">
+        <button class="filters__button filter-tab-active" data-target="#experience" type="button">
+          Experience
+        </button>
+        <button class="filters__button" data-target="#skills" type="button">
+          Skills
+        </button>
+        <button class="filters__button" data-target="#education" type="button">
+          Education
+        </button>
+        <button class="filters__button" data-target="#projects" type="button">
+          Projects
+        </button>
+        <button class="filters__button" data-target="#certificates" type="button">
+          Certificates
+        </button>
+      </ul>
+
+      <div class="filters__sections">
+        <!--=============== SKILLS ===============-->
+        <div class="skills__content grid" data-content id="skills">
+          <div class="skills__category">
+            <h3 class="skills__category-title">
+              <i class="ri-code-s-slash-line"></i> Languages & Frameworks
+            </h3>
+            <div class="skills__grid">
+              <div class="skills__item"><i class="ri-code-line"></i><span class="skills__name">.NET Core</span></div>
+              <div class="skills__item"><i class="ri-blaze-line"></i><span class="skills__name">ASP.NET MVC</span></div>
+              <div class="skills__item"><i class="ri-angularjs-line"></i><span class="skills__name">Angular</span></div>
+              <div class="skills__item"><i class="ri-flashlight-line"></i><span class="skills__name">FastAPI</span>
+              </div>
+              <div class="skills__item"><i class="ri-braces-line"></i><span class="skills__name">Python</span></div>
+              <div class="skills__item"><i class="ri-code-s-slash-line"></i><span class="skills__name">TypeScript</span>
+              </div>
+              <div class="skills__item"><i class="ri-braces-fill"></i><span class="skills__name">VB.NET</span></div>
+              <div class="skills__item"><i class="ri-share-line"></i><span class="skills__name">SQL</span></div>
             </div>
           </div>
 
-          <h2 class="profile__name">Adwait Tikekar</h2>
-          <h3 class="profile__profession">Software Engineer</h3>
+          <div class="skills__category">
+            <h3 class="skills__category-title">
+              <i class="ri-cloud-line"></i> Cloud, Architecture & DevOps
+            </h3>
+            <div class="skills__grid">
+              <div class="skills__item"><i class="ri-amazon-line"></i><span class="skills__name">Amazon Web
+                  Services</span></div>
+              <div class="skills__item"><i class="ri-server-line"></i><span class="skills__name">Apache Kafka</span>
+              </div>
+              <div class="skills__item"><i class="ri-git-branch-line"></i><span class="skills__name">Git</span></div>
+              <div class="skills__item"><i class="ri-github-fill"></i><span class="skills__name">GitHub</span></div>
+              <div class="skills__item"><i class="ri-bit-coin-line"></i><span class="skills__name">Bitbucket</span>
+              </div>
+              <div class="skills__item"><i class="ri-rocket-line"></i><span class="skills__name">CI/CD</span></div>
+              <div class="skills__item"><i class="ri-cloud-windy-line"></i><span class="skills__name">DevOps</span>
+              </div>
+              <div class="skills__item"><i class="ri-bar-chart-2-line"></i><span class="skills__name">Datadog</span>
+              </div>
+              <div class="skills__item"><i class="ri-shield-check-line"></i><span class="skills__name">SonarQube</span>
+              </div>
+            </div>
+          </div>
 
-          <ul class="profile__social">
-            <a
-              href="https://www.instagram.com/adwait1605p"
-              target="_blank"
-              class="profile__social-link"
-            >
-              <i class="ri-instagram-line"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/adwait-tikekar-07673a238"
-              target="_blank"
-              class="profile__social-link"
-            >
-              <i class="ri-linkedin-box-line"></i>
-            </a>
-            <a
-              href="https://github.com/Adwait18-cpu"
-              target="_blank"
-              class="profile__social-link"
-            >
-              <i class="ri-github-line"></i>
-            </a>
-            <a
-              href="https://twitter.com/AdwaitTikekar?t=SLAcP1YQ4mT4ivGIO1FgFQ&s=09"
-              target="_blank"
-              class="profile__social-link"
-            >
-              <i class="ri-twitter-line"></i>
-            </a>
-          </ul>
+          <div class="skills__category">
+            <h3 class="skills__category-title">
+              <i class="ri-database-2-line"></i> Database & Data
+            </h3>
+            <div class="skills__grid">
+              <div class="skills__item"><i class="ri-database-2-fill"></i><span class="skills__name">SQL Server</span>
+              </div>
+              <div class="skills__item"><i class="ri-hard-drive-2-line"></i><span class="skills__name">SSIS</span></div>
+            </div>
+          </div>
+
+
+          <div class="skills__category">
+            <h3 class="skills__category-title">
+              <i class="ri-list-check"></i> Project Management
+            </h3>
+            <div class="skills__grid">
+              <div class="skills__item"><i class="ri-trello-line"></i><span class="skills__name">Jira</span></div>
+              <div class="skills__item"><i class="ri-team-line"></i><span class="skills__name">Agile</span></div>
+            </div>
+          </div>
         </div>
 
-        <!-- <div class="profile__info grid">
-          <div class="profile__info-group">
-            <h3 class="profile__info-number">1 <i class="ri-star-line"></i></h3>
-            <p class="profile__info-description">
-              Years of <br />
-              work
-            </p>
-          </div>
-          <div class="profile__info-group">
-            <h3 class="profile__info-number">3+</h3>
-            <p class="profile__info-description">
-              Completed <br />
-              projects
-            </p>
-          </div>
-          <div class="profile__info-group">
-            <h3 class="profile__info-number">500+</h3>
-            <p class="profile__info-description">
-              Satisfied <br />
-              customers
-            </p>
-          </div>
-        </div> -->
+        <!--=============== EXPERIENCE ===============-->
+        <div class="experience__content grid filters__active" data-content id="experience">
+          <article class="experience-showcase about__card">
+            <div class="experience-showcase__rail" aria-hidden="true">
+              <span class="experience-showcase__node"></span>
+              <span class="experience-showcase__line"></span>
+            </div>
+            <div class="experience-showcase__inner">
+              <header class="experience-showcase__header">
+                <div class="experience-showcase__brand">
+                  <span class="experience-showcase__mark" aria-hidden="true">GL</span>
+                  <div class="experience-showcase__titles">
+                    <h3 class="experience-showcase__role">Software Engineer</h3>
+                    <p class="experience-showcase__org">GlobalLogic</p>
+                  </div>
+                </div>
+                <div class="experience-showcase__meta">
+                  <span class="experience-showcase__badge">Current</span>
+                  <time class="experience-showcase__period" datetime="2024-05">May 2024 – Present</time>
+                </div>
+              </header>
+              <p class="experience-showcase__tagline">
+                Healthcare platforms, high-traffic APIs, and production-first delivery—end to end.
+              </p>
+              <ul class="experience-showcase__stack" aria-label="Primary technologies">
+                <li>.NET Core</li>
+                <li>Angular</li>
+                <li>FastAPI</li>
+                <li>GraphQL</li>
+                <li>SQL Server</li>
+                <li>AWS</li>
+                <li>Agile</li>
+              </ul>
+              <div class="experience-showcase__ledger">
+                <section class="experience-ledger">
+                  <h4 class="experience-ledger__title">
+                    <i class="ri-stack-line" aria-hidden="true"></i>
+                    Build &amp; architecture
+                  </h4>
+                  <ul class="experience-ledger__list">
+                    <li>
+                      Engineer and maintain full-stack healthcare applications leveraging .NET Core, ASP.NET MVC,
+                      Angular, and SQL Server in an Agile environment
+                    </li>
+                    <li>
+                      Architect and implement RESTful APIs and GraphQL services with FastAPI on AWS Lambda,
+                      ensuring scalability and high performance
+                    </li>
+                  </ul>
+                </section>
+                <section class="experience-ledger">
+                  <h4 class="experience-ledger__title">
+                    <i class="ri-pulse-line" aria-hidden="true"></i>
+                    Performance &amp; reliability
+                  </h4>
+                  <ul class="experience-ledger__list">
+                    <li>
+                      Optimize database queries and enhance API response times to improve system performance and
+                      user experience across large-scale applications
+                    </li>
+                    <li>
+                      Diagnose and resolve critical production issues in enterprise healthcare systems, sustaining
+                      zero-downtime
+                    </li>
+                  </ul>
+                </section>
+                <section class="experience-ledger">
+                  <h4 class="experience-ledger__title">
+                    <i class="ri-group-line" aria-hidden="true"></i>
+                    Collaboration &amp; delivery
+                  </h4>
+                  <ul class="experience-ledger__list">
+                    <li>
+                      Collaborate with cross-functional teams including product managers, designers, and QA
+                      engineers to deliver features aligned with business requirements
+                    </li>
+                    <li>
+                      Contribute to code reviews, sprint planning, and backlog grooming sessions while maintaining
+                      consistent story point delivery per sprint
+                    </li>
+                  </ul>
+                </section>
+                <section class="experience-ledger">
+                  <h4 class="experience-ledger__title">
+                    <i class="ri-cloud-line" aria-hidden="true"></i>
+                    Cloud &amp; DevOps
+                  </h4>
+                  <ul class="experience-ledger__list">
+                    <li>
+                      Leverage AWS cloud services (Lambda, AppSync, SQS, CloudWatch) and deploy code using CI/CD
+                      pipelines with TeamCity, Octopus, and GitHub Actions
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </article>
+        </div>
 
-        <div class="profile__buttons">
-          <!-- Insert your CV -->
-          <a download="" href="Assets/Resume/myresume.pdf" class="button">
-            Download Resume <i class="ri-download-line"></i>
-          </a>
+        <!--=============== EDUCATION ===============-->
+        <div class="education__content grid" data-content id="education">
+          <article class="education__card about__card">
+            <h3 class="education__school">Yeshwantrao Chavan College of Engineering (YCCE)</h3>
+            <p class="education__degree">Bachelor of Technology, Computer Science and Engineering</p>
+            <span class="education__dates">Jan 2020 – Jan 2024</span>
+            <p class="education__grade">CGPA: 8.62</p>
+          </article>
+          <article class="education__card about__card">
+            <h3 class="education__school">Dharampeth M.P. Deo Memorial Science College</h3>
+            <p class="education__degree">Higher Secondary, Sciences</p>
+            <span class="education__dates">Jul 2018 – May 2020</span>
+            <p class="education__grade">Percentage: 84.31%</p>
+          </article>
+        </div>
 
-          <!--
-            <div class="profile__buttons-small">
-            //Insert your brand name or profile 
-            <a
-              href="mailto:tikekaradwait6@gmail.com"
-              target="_blank"
-              class="button button__small button__gray"
-            >
-              <i class="ri-mail-line"></i>
+        <!--=============== PROJECTS ===============-->
+        <div class="projects__content grid" data-content id="projects">
+          <article class="project-card-new">
+            <header class="project-header-new">
+              <h3 class="project-title-new">Enterprise Healthcare Management System</h3>
+              <span class="project-date-new">Sep 2024 - Present</span>
+            </header>
+            <ul class="project-list-new">
+              <li>Built a new healthcare module from scratch using Angular 15, FastAPI on AWS Lambda, and GraphQL with
+                AppSync</li>
+              <li>Developed and optimized 12+ APIs, including a high-performance search API handling 12k-18k records
+              </li>
+              <li>Reduced API response time from 6s to 300-900ms</li>
+              <li>Implemented bulk patient discharge process using AWS SQS and Lambda with DLQ for failed message
+                re-processing</li>
+              <li>Optimized Geo-Location Kafka service using multi-threading, improving performance from 4-7s to
+                350-600ms</li>
+              <li>Resolved 7-8 P1 production bugs in 4 days with zero client escalations</li>
+              <li>Optimized legacy SSIS jobs for processing healthcare EDI files</li>
+            </ul>
+          </article>
+
+          <article class="project-card-new">
+            <header class="project-header-new">
+              <h3 class="project-title-new">Real Time Soil Health Monitoring and Crop Management System</h3>
+              <span class="project-date-new">May 2023 - Apr 2024</span>
+            </header>
+            <ul class="project-list-new">
+              <li>Developed an intelligent agriculture system integrating IoT devices, Android application, and ML
+                models</li>
+              <li>Built Android application to retrieve soil data and display crop and fertilizer recommendations in
+                real-time</li>
+              <li>Designed scripts for IoT device to capture soil parameters (NPK, pH, nutrients) and transmit data to
+                database</li>
+              <li>System provides predictive results to farmers for better crop management</li>
+            </ul>
+            <div class="project-badge-new"><i class="ri-award-line"></i> Patent Granted: October 2025</div>
+          </article>
+        </div>
+
+        <!--=============== CERTIFICATES ===============-->
+        <div class="cert-content-new" data-content id="certificates">
+          <article class="cert-card-new">
+            <div class="cert-card-header">
+              <div class="cert-icon"><i class="ri-amazon-line"></i></div>
+              <div class="cert-info">
+                <span class="cert-platform">Amazon Web Services</span>
+                <h3 class="cert-title">AWS Certified Solutions Architect – Associate</h3>
+              </div>
+            </div>
+            <a href="https://www.credly.com/badges/192afad1-a015-40c6-a3ff-b57f811bcb54" class="cert-button"
+              target="_blank" rel="noopener noreferrer">
+              View Credential <i class="ri-arrow-right-up-line"></i>
             </a>
-            //Insert your brand name or profile 
-            <a
-              href=""
-              target="_blank"
-              class="button button__small button__gray"
-            >
-              <i class="ri-messenger-line"></i>
+          </article>
+
+          <article class="cert-card-new">
+            <div class="cert-card-header">
+              <div class="cert-icon"><i class="ri-angularjs-line"></i></div>
+              <div class="cert-info">
+                <span class="cert-platform">Angular</span>
+                <h3 class="cert-title">The Complete Angular Course: Beginner to Advanced</h3>
+              </div>
+            </div>
+            <a href="https://www.udemy.com/certificate/UC-2ad02618-b663-47bc-9c27-9cb91c151640/" class="cert-button"
+              target="_blank" rel="noopener noreferrer">
+              View Credential <i class="ri-arrow-right-up-line"></i>
             </a>
-          </div>
-          -->
+          </article>
+
+          <article class="cert-card-new">
+            <div class="cert-card-header">
+              <div class="cert-icon"><i class="ri-code-box-line"></i></div>
+              <div class="cert-info">
+                <span class="cert-platform">Python</span>
+                <h3 class="cert-title">Complete Python Bootcamp</h3>
+              </div>
+            </div>
+            <a href="https://www.udemy.com/certificate/UC-d5e2faca-ec23-4f85-abad-75a87e05b3ca/" class="cert-button"
+              target="_blank" rel="noopener noreferrer">
+              View Credential <i class="ri-arrow-right-up-line"></i>
+            </a>
+          </article>
         </div>
       </div>
-    </header>
+    </section>
+  </main>
 
-    <!--=============== MAIN ===============-->
-    <main class="main">
-        <section class="filters container">
-            <!--=============== FILTERS TABS ===============-->
-            <ul class="filters__content">
-                <button class="filters__button filter-tab-active" data-target="#skills">
-                  Skills
-                </button>
-                <button class="filters__button " data-target="#projects">
-                  Projects
-                </button>
-                <button class="filters__button " data-target="#certificates">
-                  Certificates
-                </button>
-            </ul>
+  <!--=============== FOOTER ===============-->
+  <footer class="footer container">
+    <span class="footer__copy">© <span id="year"></span> Adwait Tikekar</span>
+  </footer>
 
-            <div class="filters__sections">
-                <!--=============== PROJECTS ===============-->
-                <div class="projects__content grid" data-content id="projects">
-                    <article class="projects__card">
-                        <!-- Insert your image in a rectangular format (Ex: 600 x 400, 1000 x 800, 1200 x 1000, etc) -->
-                        <img src="Assets/image/project1.png" alt="" class="projects__img">
+  <!--=============== SCROLLREVEAL ===============-->
+  <script src="Assets/js/scrollreveal.min.js"></script>
 
-                        <div class="projects__modal">
-                            <div>
-                                <span class="projects__subtitle">Web</span>
-                                <h3 class="projects__title">Random Quote Generator</h3>
-                                <a href="https://github.com/Adwait18-cpu/Random-Quote-Generator" 
-                                    class="projects__button button button__small"
-                                    target="_blank">
-                                    <i class="ri-link"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
+  <!--=============== MAIN JS ===============-->
+  <script src="Assets/js/main.js"></script>
+</body>
 
-                    <article class="projects__card">
-                        <img src="Assets/image/project2.png" alt="" class="projects__img">
-
-                        <div class="projects__modal">
-                            <div>
-                                <span class="projects__subtitle">Web</span>
-                                <h3 class="projects__title">Portfolio Website</h3>
-                                <a href="https://github.com/Adwait18-cpu/Portfolio" class="projects__button button button__small">
-                                    <i class="ri-link"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="projects__card">
-                      <img src="Assets/image/project3.png" alt="" class="projects__img">
-
-                      <div class="projects__modal">
-                          <div>
-                              <span class="projects__subtitle">Python</span>
-                              <h3 class="projects__title">Grocery Store Management System</h3>
-                              <a href="https://github.com/Adwait18-cpu/Grocery-Store-Management-System" class="projects__button button button__small">
-                                  <i class="ri-link"></i>
-                              </a>
-                          </div>
-                      </div>
-                  </article>
-                </div>
-
-                <!--=============== CERTIFICATES ===============-->
-                <div class="projects__content grid" data-content id="certificates">
-                  <article class="projects__card">
-                      <!-- Insert your image in a rectangular format (Ex: 600 x 400, 1000 x 800, 1200 x 1000, etc) -->
-                      <img src="Assets/certificates/cert1.jpg" alt="" class="projects__img">
-
-                      <div class="projects__modal">
-                          <div>
-                              <span class="projects__subtitle">Python</span>
-                              <h3 class="projects__title">Complete Python Bootcamp</h3>
-                              <a href="https://www.udemy.com/certificate/UC-d5e2faca-ec23-4f85-abad-75a87e05b3ca/" 
-                                  class="projects__button button button__small"
-                                  target="_blank">
-                                  <i class="ri-link"></i>
-                              </a>
-                          </div>
-                      </div>
-                  </article>
-
-                  <article class="projects__card">
-                      <img src="Assets/certificates/cert2.jpeg" alt="" class="projects__img">
-
-                      <div class="projects__modal">
-                          <div>
-                              <span class="projects__subtitle">PHP</span>
-                              <h3 class="projects__title">Building Web Applications in PHP</h3>
-                              <a href="https://www.coursera.org/account/accomplishments/verify/D8DC85F89FCR?utm_source%3Dandroid%26utm_medium%3Dcertificate%26utm_content%3Dcert_image%26utm_campaign%3Dsharing_cta%26utm_product%3Dcourse" class="projects__button button button__small" target="_blank">
-                                  <i class="ri-link"></i>
-                              </a>
-                          </div>
-                      </div>
-                  </article>
-                  <article class="projects__card">
-                    <img src="Assets/certificates/cert3.png" alt="" class="projects__img">
-
-                    <div class="projects__modal">
-                        <div>
-                            <span class="projects__subtitle">EDA</span>
-                            <h3 class="projects__title">Introduction to Expolratory Data Analysis</h3>
-                            <a href="https://aiplanet.com/course/certificates/verify/3689e21a-3928-4f4b-9378-ee3c8ee44c72" class="projects__button button button__small" target="_blank">
-                                <i class="ri-link"></i>
-                            </a>
-                        </div>
-                    </div>
-                  </article>
-                  <article class="projects__card">
-                    <img src="Assets/certificates/cert4.png" alt="" class="projects__img">
-
-                    <div class="projects__modal">
-                        <div>
-                            <span class="projects__subtitle">ML</span>
-                            <h3 class="projects__title">Machine Learning Problem Solving</h3>
-                            <a href="https://aiplanet.com/course/certificates/verify/55d3cc3d-8f94-4770-b059-77e2411527b5" class="projects__button button button__small" target="_blank">
-                              <i class="ri-link"></i>
-                            </a>
-                        </div>
-                    </div>
-                  </article>
-              </div>
-
-
-                <!--=============== SKILLS ===============-->
-                <div class="skills__content grid filters__active" data-content id="skills">
-                    <div class="skills__area">
-                        <h3 class="skills__title">Web Development</h3>
-
-                        <div class="skills__box">
-                            <div class="skills__group">
-                                <div class="skills__data">
-                                    <i class="ri-checkbox-circle-line"></i>
-
-                                    <div>
-                                        <h3 class="skills__name">HTML</h3>
-                                        <span class="skills__level">Advanced</span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <i class="ri-checkbox-circle-line"></i>
-
-                                    <div>
-                                        <h3 class="skills__name">CSS</h3>
-                                        <span class="skills__level">Advanced</span>
-                                    </div>
-                                </div>
-
-                                 <div class="skills__data">
-                                    <i class="ri-checkbox-circle-line"></i>
-
-                                    <div>
-                                        <h3 class="skills__name">PHP</h3>
-                                        <span class="skills__level">Basic</span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <i class="ri-checkbox-circle-line"></i>
-
-                                    <div>
-                                        <h3 class="skills__name">JavaScript</h3>
-                                        <span class="skills__level">Intermediate</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="skills__group">
-                                <div class="skills__data">
-                                    <i class="ri-checkbox-circle-line"></i>
-
-                                    <div>
-                                        <h3 class="skills__name">MySQL</h3>
-                                        <span class="skills__level">Basic</span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <i class="ri-checkbox-circle-line"></i>
-
-                                    <div>
-                                        <h3 class="skills__name">Bootstrap</h3>
-                                        <span class="skills__level">Intermediate</span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <i class="ri-checkbox-circle-line"></i>
-
-                                    <div>
-                                        <h3 class="skills__name">Git</h3>
-                                        <span class="skills__level">Basic</span>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skills__area">
-                        <h3 class="skills__title">Programming Languages</h3>
-
-                        <div class="skills__box">
-                            <div class="skills__group">
-                                <div class="skills__data">
-                                    <i class="ri-checkbox-circle-line"></i>
-
-                                    <div>
-                                        <h3 class="skills__name">C</h3>
-                                        <span class="skills__level">Intermediate</span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <i class="ri-checkbox-circle-line"></i>
-
-                                    <div>
-                                        <h3 class="skills__name">C++</h3>
-                                        <span class="skills__level">Basic</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="skills__group">
-                                <div class="skills__data">
-                                    <i class="ri-checkbox-circle-line"></i>
-
-                                    <div>
-                                        <h3 class="skills__name">Python</h3>
-                                        <span class="skills__level">Intermediate</span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <i class="ri-checkbox-circle-line"></i>
-
-                                    <div>
-                                        <h3 class="skills__name">JAVA</h3>
-                                        <span class="skills__level">Basic</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!--=============== FOOTER ===============-->
-    <footer class="footer container">
-      <span class="footer__copy"> </span>
-    </footer>
-
-    <!--=============== SCROLLREVEAL ===============-->
-    <script src="assets/js/scrollreveal.min.js"></script>
-
-    <!--=============== MAIN JS ===============-->
-    <script src="assets/js/main.js"></script>
-  </body>
 </html>
